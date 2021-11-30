@@ -8,12 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var imageViewCollection: [UIImageView]!
+    @IBOutlet weak var filterButton: UIButton!
+    @IBOutlet weak var processButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
-
-
+    
+    
+    @IBAction func filterAction(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func processAction(_ sender: UIButton) {
+        
+    }
 }
 
