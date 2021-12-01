@@ -13,6 +13,7 @@
 		A252ED592754EBB100EE20CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A252ED572754EBB100EE20CA /* Main.storyboard */; };
 		A252ED5B2754EBB200EE20CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A252ED5A2754EBB200EE20CA /* Assets.xcassets */; };
 		A252ED5E2754EBB200EE20CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A252ED5C2754EBB200EE20CA /* LaunchScreen.storyboard */; };
+		A2D2C0652757EAA00061FAC3 /* ComputePiOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D2C0642757EAA00061FAC3 /* ComputePiOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A252ED5A2754EBB200EE20CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A252ED5D2754EBB200EE20CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A252ED5F2754EBB200EE20CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2D2C0642757EAA00061FAC3 /* ComputePiOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputePiOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				A252ED512754EBB100EE20CA /* AppDelegate.swift */,
 				A252ED532754EBB100EE20CA /* SceneDelegate.swift */,
 				A252ED552754EBB100EE20CA /* ViewController.swift */,
+				A2D2C0642757EAA00061FAC3 /* ComputePiOperation.swift */,
 				A252ED572754EBB100EE20CA /* Main.storyboard */,
 				A252ED5A2754EBB200EE20CA /* Assets.xcassets */,
 				A252ED5C2754EBB200EE20CA /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				A252ED562754EBB100EE20CA /* ViewController.swift in Sources */,
 				A252ED522754EBB100EE20CA /* AppDelegate.swift in Sources */,
+				A2D2C0652757EAA00061FAC3 /* ComputePiOperation.swift in Sources */,
 				A252ED542754EBB100EE20CA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
