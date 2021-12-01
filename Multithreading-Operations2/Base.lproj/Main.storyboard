@@ -73,7 +73,7 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="calculateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ijs-06-8VL"/>
+                                            <action selector="calculateButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ijs-06-8VL"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5K-11-7h0">
@@ -84,7 +84,7 @@
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="clearAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yF6-pi-wAz"/>
+                                            <action selector="clearButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yF6-pi-wAz"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dZk-z9-Pj0">
@@ -119,7 +119,7 @@
                     <connections>
                         <outlet property="calculateButton" destination="hBW-jr-k3c" id="ToM-4h-2G8"/>
                         <outlet property="clearButton" destination="g5K-11-7h0" id="P4L-93-xkV"/>
-                        <outlet property="groupCalculation" destination="0Hv-rt-qDi" id="4sw-sz-Xzg"/>
+                        <outlet property="groupCalculationSwitch" destination="0Hv-rt-qDi" id="4sw-sz-Xzg"/>
                         <outletCollection property="viewCollection" destination="9VA-DH-Pe4" collectionClass="NSMutableArray" id="dVw-9d-AF3"/>
                         <outletCollection property="viewCollection" destination="g8r-ar-0dB" collectionClass="NSMutableArray" id="3Yx-Fd-qcP"/>
                         <outletCollection property="viewCollection" destination="Xc1-BM-J6y" collectionClass="NSMutableArray" id="J7y-MH-2tM"/>

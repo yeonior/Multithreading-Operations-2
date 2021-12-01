@@ -12,21 +12,62 @@ class ViewController: UIViewController {
     @IBOutlet var viewCollection: [UIView]!
     @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
-    @IBOutlet weak var groupCalculation: UISwitch!
+    @IBOutlet weak var groupCalculationSwitch: UISwitch!
+    
+    private let queue = OperationQueue()
+    private let iterationsArray = [5000, 10000, 30000, 50000]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         calculateButton.layer.cornerRadius = 15
         clearButton.layer.cornerRadius = 15
-        groupCalculation.isOn = false
+        groupCalculationSwitch.isOn = false
     }
     
-    @IBAction func calculateAction(_ sender: UIButton) {
+    private func updateUI(view: UIView, operation: ComputePiOperation) {
         
+        DispatchQueue.main.async {
+            for indexR in operation.redPointsArray {
+                view.addSubview(indexR)
+            }
+            
+            for indexB in operation.bluePointsArray {
+                view.addSubview(indexB)
+            }
+        }
     }
     
-    @IBAction func clearAction(_ sender: UIButton) {
+    @IBAction func calculateButtonAction(_ sender: UIButton) {
+        
+        for (index, value) in iterationsArray.enumerated() {
+            let _value = viewCollection[index]
+            
+            // creating operation
+            let operation = ComputePiOperation(iterations: value)
+            operation.completionBlock = {
+                print("Operation #\(index)")
+                
+//                // pi number calculation
+//                let pi = Double(operation.redPointsArray.count) / Double(operation.bluePointsArray.count)
+//                print("\nPI NUMBER = \(pi)\n")
+//                print(operation.redPointsArray.count)
+//                print(operation.bluePointsArray.count)
+                
+                // updating UI
+                self.updateUI(view: _value, operation: operation)
+            }
+            
+            queue.addOperation(operation)
+            
+            // group calculation
+            if groupCalculationSwitch.isOn {
+                queue.waitUntilAllOperationsAreFinished()
+            }
+        }
+    }
+    
+    @IBAction func clearButtonAction(_ sender: UIButton) {
         
     }
 }
