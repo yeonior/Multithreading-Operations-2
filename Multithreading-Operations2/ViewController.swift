@@ -9,22 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet var imageViewCollection: [UIImageView]!
-    @IBOutlet weak var filterButton: UIButton!
-    @IBOutlet weak var processButton: UIButton!
+    @IBOutlet var viewCollection: [UIView]!
+    @IBOutlet weak var calculateButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var groupCalculation: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        calculateButton.layer.cornerRadius = 15
+        clearButton.layer.cornerRadius = 15
+        groupCalculation.isOn = false
+    }
+    
+    @IBAction func calculateAction(_ sender: UIButton) {
         
     }
     
-    
-    @IBAction func filterAction(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func processAction(_ sender: UIButton) {
+    @IBAction func clearAction(_ sender: UIButton) {
         
     }
 }
