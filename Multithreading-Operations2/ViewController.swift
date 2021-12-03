@@ -68,7 +68,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearButtonAction(_ sender: UIButton) {
-        
+        for view in viewCollection {
+            for subview in view.subviews {
+                subview.removeFromSuperview()
+            }
+        }
     }
 }
 
