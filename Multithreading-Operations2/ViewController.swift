@@ -7,6 +7,8 @@
 
 import UIKit
 
+// practicing with the operation subclasses
+
 class ViewController: UIViewController {
     
     @IBOutlet var viewCollection: [UIView]!
@@ -25,6 +27,7 @@ class ViewController: UIViewController {
         groupCalculationSwitch.isOn = false
     }
     
+    // updating UI
     private func updateUI(view: UIView, operation: ComputePiOperation) {
         
         DispatchQueue.main.async {
@@ -38,6 +41,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // calculation with the operation subclass
     @IBAction func calculateButtonAction(_ sender: UIButton) {
         
         for (index, value) in iterationsArray.enumerated() {
@@ -67,6 +71,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // clearing the views
     @IBAction func clearButtonAction(_ sender: UIButton) {
         for view in viewCollection {
             for subview in view.subviews {

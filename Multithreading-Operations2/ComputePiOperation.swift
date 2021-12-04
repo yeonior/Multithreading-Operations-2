@@ -21,11 +21,11 @@ final class ComputePiOperation: Operation {
         
         let startTime = Date()
         
-        // estimating Pi using the Monte Carlo method
+        // estimating pi using the monte carlo method
         for _ in 0..._iterations {
             
             let (x, y) = (drand48() * 2 - 1, drand48() * 2 - 1)
-            let point = UIView(frame: CGRect(x: 3 * (x + 1) * 27, y: 3 * (y + 1) * 27, width: 1, height: 1))
+            let point = UIView(frame: CGRect(x: 4 * (x + 1) * 22, y: 4 * (y + 1) * 22, width: 1, height: 1))
             if x * x + y * y <= 1 {
                 point.backgroundColor = UIColor.red
                 redPointsArray.append(point)
